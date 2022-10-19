@@ -25,11 +25,11 @@
         </ul>
     </header>
 
-    <div class="container">
-        <h1>Well, i can´t find you without your permission, but here´s a map. Help yourself!</h1>
+     <div class="container">
+        <h1>Press the white box to know where you are</h1>
     </div>
 
-<!--     <div class="mapouter">
+    <!-- <div class="mapouter">
         <div class="gmap_canvas"><iframe width="900px" height="500px" id="gmap_canvas"
                 src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9963.964815754469!2d12.458993471350105!3d51.36645839409968!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x4e880818959970df!2sSoftwareONE%20Deutschland%20GmbH!5e0!3m2!1sen!2sde!4v1665664454325!5m2!1sen!2sde"
                 frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><br>
@@ -49,9 +49,16 @@
                     width: 900px;
                 }
             </style>
-        </div> -->
-        <div class="mapouter"><div id="map"></div></div>
+        </div>
+    </div> -->
+
+    <div class="mapouter">
+        <iframe id="mapouter" title="Project preview"
+            src="https://unpkg.com/playground-elements@0.16.1/__playground_swfs_f56081d9/37umtsn/index.html"></iframe>
     </div>
+
+
+    <script type="module" src="https://geo-devrel-javascript-samples.web.app/resizer.js"></script>
 
     <div id="about" class="container">
         <p>This web-page is my first attempt to build a site with a help of html/css.<br>
@@ -63,63 +70,18 @@
     <div id="video" class="container"><video src="../recources/video/Illia Shokotko - Introduction.mp4" width="90%"
             controls>Some things about me</video></div>
     <a href="#header">Back to top</a>
-    <script>
-        // Note: This example requires that you consent to location sharing when
-// prompted by your browser. If you see the error "The Geolocation service
-// failed.", it means you probably did not give permission for the browser to
-// locate you.
-let map, infoWindow;
 
-function initMap() {
-  map = new google.maps.Map(document.getElementById("map"), {
-    center: { lat: -34.397, lng: 150.644 },
-    zoom: 6,
-  });
-  infoWindow = new google.maps.InfoWindow();
+    <div id="about" class="container">
+        <p>This web-page is my first attempt to build a site with a help of html/css.<br>
+            Please do not judge it very hard, i know it sucks, but i am learning.<br>
+            You can press <a href="#header">this</a> to go back to top.<br>
+            Thank you!</p>
+    </div>
+    <br>
+    <div id="video" class="container"><video src="../recources/video/Illia Shokotko - Introduction.mp4" width="90%"
+            controls>Some things about me</video></div>
+    <a href="#header">Back to top</a>
 
-  const locationButton = document.createElement("button");
-
-  locationButton.textContent = "Pan to Current Location";
-  locationButton.classList.add("custom-map-control-button");
-  map.controls[google.maps.ControlPosition.TOP_CENTER].push(locationButton);
-  locationButton.addEventListener("click", () => {
-    // Try HTML5 geolocation.
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(
-        (position) => {
-          const pos = {
-            lat: position.coords.latitude,
-            lng: position.coords.longitude,
-          };
-
-          infoWindow.setPosition(pos);
-          infoWindow.setContent("Location found.");
-          infoWindow.open(map);
-          map.setCenter(pos);
-        },
-        () => {
-          handleLocationError(true, infoWindow, map.getCenter());
-        }
-      );
-    } else {
-      // Browser doesn't support Geolocation
-      handleLocationError(false, infoWindow, map.getCenter());
-    }
-  });
-}
-
-function handleLocationError(browserHasGeolocation, infoWindow, pos) {
-  infoWindow.setPosition(pos);
-  infoWindow.setContent(
-    browserHasGeolocation
-      ? "Error: The Geolocation service failed."
-      : "Error: Your browser doesn't support geolocation."
-  );
-  infoWindow.open(map);
-}
-
-window.initMap = initMap;
-    </script>
-</body>
+    </body>
 
 </html>
