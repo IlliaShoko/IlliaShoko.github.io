@@ -1,0 +1,70 @@
+body {
+    font-family: 'Space mono', sans-serif;
+    background-color: rgb(8, 8, 61);
+    /* background-image: url('../image/IMGP0139.JPG'); */
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)), url('../image/IMGP0139.JPG');
+    background-size: 50px;
+    height: 100%;
+}
+
+h1 {
+    margin-top: 5%;
+    background-color: rgb(241, 182, 92);
+    display: inline-block;
+}
+
+.mapouter {
+    top: 100px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 150px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    opacity: 0.8;
+}
+
+header {
+    background-color: rgb(104, 67, 11, 0.8);
+    border: 2px solid rgb(71, 44, 3);
+    /* padding: 4px; */
+    /* display: flex;
+    justify-content: right; */
+    text-align: right;
+    /* if you want the header to be fixed  */
+    /* position: fixed;
+    width: 100%; */
+}
+
+li {
+    display: inline-block;
+    padding-right: 2rem;
+    color: whitesmoke;
+}
+
+p {
+    background-color: rgb(241, 182, 92);
+    border-radius: 4px;
+    box-shadow: 5px 5px 6px rgba(255, 255, 255, 0.7);
+}
+
+#about {
+    padding: 100px 20px;
+    margin: 25%;
+    border: 25px groove rgb(241, 182, 92);
+    border-radius: 10%;
+    opacity: 0.9;
+    box-shadow: 7px 5px 15px rgba(255, 255, 255, 0.7);
+}
+
+#video {
+    margin: 10% 3% 0;
+    opacity: 1;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}

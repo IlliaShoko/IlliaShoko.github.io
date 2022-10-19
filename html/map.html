@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map</title>
+    <link rel="stylesheet" href="../recources/css/map.css">
+    <script src="https://kit.fontawesome.com/29960bc042.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather:ital@0;1&family=Space+Mono&family=Work+Sans:wght@400;500;800&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <header id="header">
+        <ul>
+            <li><a href="#about">About me <i class="fa-solid fa-file-lines fa-flip"
+                        style="--fa-animation-duration: 3s;"></i></a></li>
+            <li><a href="#video">Introduction video <i class="fa-solid fa-video fa-bounce"></i></a></li>
+        </ul>
+    </header>
+
+    <div class="container">
+        <h1>Well, i can´t find you without your permission, but here´s a map. Help yourself!</h1>
+    </div>
+
+    <div class="mapouter">
+        <div class="gmap_canvas"><iframe width="900px" height="500px" id="gmap_canvas"
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9963.964815754469!2d12.458993471350105!3d51.36645839409968!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x4e880818959970df!2sSoftwareONE%20Deutschland%20GmbH!5e0!3m2!1sen!2sde!4v1665664454325!5m2!1sen!2sde"
+                frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><br>
+            <style>
+                .mapouter {
+                    position: relative;
+                    text-align: right;
+                    height: 100%;
+                    width: 100%;
+                }
+            </style><a href="https://www.embedgooglemap.net">how to add a google map to your website</a>
+            <style>
+                .gmap_canvas {
+                    overflow: hidden;
+                    background: none !important;
+                    height: 500px;
+                    width: 900px;
+                }
+            </style>
+        </div>
+    </div>
+
+    <div id="about" class="container">
+        <p>This web-page is my first attempt to build a site with a help of html/css.<br>
+            Please do not judge it very hard, i know it sucks, but i am learning.<br>
+            You can press <a href="#header">this</a> to go back to top.<br>
+            Thank you!</p>
+    </div>
+    <br>
+    <div id="video" class="container"><video src="../recources/video/Illia Shokotko - Introduction.mp4" width="90%"
+            controls>Some things about me</video></div>
+    <a href="#header">Back to top</a>
+
+</body>
+
+</html>

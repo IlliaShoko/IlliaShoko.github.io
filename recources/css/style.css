@@ -1,0 +1,92 @@
+body {
+   background-image: url('../image/twinkle-little-star.gif');
+   background-color: #000000;
+   background-size: cover;
+   color: #fff;
+   font-family: Consolas, monospace;
+   }
+
+.box {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.button-box {
+   margin: 0;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   margin-right: -50%;
+   transform: translate(-50%, -50%);
+   width: 260px;
+   height: 260px;
+   /* text-shadow: -10px -10px -15px rgba(255, 255, 255, 0.3); */
+   border-radius: 50%;
+   background-image: url('../image/black-hole.gif');
+   background-size: cover;
+   background-position: center;
+   background-color: rgb(1, 1, 24);
+   border: 1px solid rgba(6, 96, 99, 0.568);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   opacity: 0.88;
+   transition: width 5000ms linear, height 5000ms cubic-bezier(0.1, 0.7, 1, 0.1);
+}
+
+.button-box:hover {
+   border: 1px solid rgba(182, 218, 219, 0.5);
+   width: 85vh;
+   height: 85vh;
+}
+
+.button {
+   margin: 0;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   margin-right: -50%;
+   transform: translate(-50%, -50%);
+   font-size: 3em;
+   opacity: 0.82;
+}
+
+
+a {
+   text-decoration: none;
+   box-shadow: inset 0 0 0 0 #54b3d6;
+   color: #54b3d6;
+   margin: 0 -.25rem;
+   padding: 0 .25rem;
+   transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+
+a:hover {
+   box-shadow: inset 210px 0 0 0 #54b3d6;
+   color: white;
+}
+
+audio {
+   width: 100px;
+   height: 50px;
+   opacity: 0.25;
+}
+
+#ship {
+   opacity: .75;
+   position: absolute;
+   top: 25vh;
+   right: 75vh;
+   transition: opacity 2s linear, transform 2s linear;
+}
+
+.button-box:active #ship {
+   transform: translate(30vh, 15vh);
+   opacity: 0;
+}
+
+h1 {
+   /* text-transform: uppercase; */
+   letter-spacing: 2px;
+}

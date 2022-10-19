@@ -1,0 +1,52 @@
+@font-face {
+    font-family: Monofett;
+    src: url('../font/Monofett/Monofett-Regular.ttf');
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-bottom: 400px;
+}
+
+body {
+    font-family: Monofett, serif;
+    background-image: url('../image/night_sky_back.jpg');
+    background-position: center;
+    color: rgb(73, 108, 161);
+    font-size: 5em;
+}
+
+.question {
+    height: 40rem;
+    padding-top: 10%;
+    text-align: center;
+    position: sticky;
+    top: 10px;
+    background-image: url('../image/night_sky_back.jpg');
+    background-position: center;
+}
+
+p {
+    font-size: 2.5rem;
+    margin-top: 10%;
+}
+
+audio {
+    width: 100px;
+    height: 50px;
+    opacity: 0.25;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(73, 108, 161);
+    transition: font-size 1.5s ease-in;
+}
+
+a:hover {
+    font-size: 5rem;
+}
+
+#but:hover {
+    font-size: 11rem;
+}
