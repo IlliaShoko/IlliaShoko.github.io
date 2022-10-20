@@ -17,6 +17,48 @@
 </head>
 
 <body>
+
+    <div class="buble-container">
+        <div class="bubbles">
+            <span style="--i:11;"></span>
+            <span style="--i:12;"></span>
+            <span style="--i:21;"></span>
+            <span style="--i:15;"></span>
+            <span style="--i:18;"></span>
+            <span style="--i:22;"></span>
+            <span style="--i:17;"></span>
+            <span style="--i:14;"></span>
+            <span style="--i:24;"></span>
+            <span style="--i:20;"></span>
+            <span style="--i:23;"></span>
+            <span style="--i:13;"></span>
+            <span style="--i:19;"></span>
+            <span style="--i:16;"></span>
+            <span style="--i:11;"></span>
+            <span style="--i:12;"></span>
+            <span style="--i:21;"></span>
+            <span style="--i:15;"></span>
+            <span style="--i:18;"></span>
+            <span style="--i:22;"></span>
+            <span style="--i:17;"></span>
+            <span style="--i:14;"></span>
+            <span style="--i:11;"></span>
+            <span style="--i:12;"></span>
+            <span style="--i:21;"></span>
+            <span style="--i:15;"></span>
+            <span style="--i:18;"></span>
+            <span style="--i:22;"></span>
+            <span style="--i:17;"></span>
+            <span style="--i:14;"></span>
+            <span style="--i:24;"></span>
+            <span style="--i:20;"></span>
+            <span style="--i:23;"></span>
+            <span style="--i:13;"></span>
+            <span style="--i:19;"></span>
+            <span style="--i:16;"></span>
+        </div>
+    </div>
+
     <header id="header">
         <ul>
             <li><a href="#about">About me <i class="fa-solid fa-file-lines fa-flip"
@@ -25,10 +67,29 @@
         </ul>
     </header>
 
-     <div class="container">
-        <h1>Press the white box to know where you are</h1>
+
+    <div class="container">
+        <h1>You are <a href="#" id="get_location">here </a><i class="fa-solid fa-arrow-left fa-fade" style="--fa-animation-duration: 2s;"></i></h1>
+    </div>
+    <div class="map">
+        <iframe id="google_map" width="850" height="540" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+            src="https://maps.google.co.uk?output=embed"></iframe>
     </div>
 
+    <script>
+        var c = function (pos) {
+            var lat = pos.coords.latitude,
+                long = pos.coords.longitude,
+                coords = lat + ', ' + long;
+
+            document.getElementById('google_map').setAttribute('src', 'https://maps.google.co.uk/?q=' + coords + '&z=15&output=embed')
+        }
+
+        document.getElementById('get_location').onclick = function () {
+            navigator.geolocation.getCurrentPosition(c);
+            return false;
+        }
+    </script>
     <!-- <div class="mapouter">
         <div class="gmap_canvas"><iframe width="900px" height="500px" id="gmap_canvas"
                 src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9963.964815754469!2d12.458993471350105!3d51.36645839409968!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x4e880818959970df!2sSoftwareONE%20Deutschland%20GmbH!5e0!3m2!1sen!2sde!4v1665664454325!5m2!1sen!2sde"
@@ -52,18 +113,12 @@
         </div>
     </div> -->
 
-    <div class="mapouter">
-        <iframe id="mapouter" title="Project preview"
-            src="https://unpkg.com/playground-elements@0.16.1/__playground_swfs_f56081d9/37umtsn/index.html"></iframe>
-    </div>
-
-
-    <script type="module" src="https://geo-devrel-javascript-samples.web.app/resizer.js"></script>
-
     <div id="about" class="container">
-        <p>This web-page is my first attempt to build a site with a help of html/css.<br>
+        <p>This web-page is my first attempt to build a web-site with a help of html/css.<br>
             Please do not judge it very hard, i know it sucks, but i am learning.<br>
             You can press <a href="#header">this</a> to go back to top.<br>
+            Here is an image of a cute duckling for you, so disign of this site wouldn´t hurt your brain too much.<br>
+            <img src="../recources/image/cute-duckling-duck-bird-yellow-duckling-animal-sweet.jpg" width="600px"><br>
             Thank you!</p>
     </div>
     <br>
@@ -71,17 +126,7 @@
             controls>Some things about me</video></div>
     <a href="#header">Back to top</a>
 
-    <div id="about" class="container">
-        <p>This web-page is my first attempt to build a site with a help of html/css.<br>
-            Please do not judge it very hard, i know it sucks, but i am learning.<br>
-            You can press <a href="#header">this</a> to go back to top.<br>
-            Thank you!</p>
-    </div>
-    <br>
-    <div id="video" class="container"><video src="../recources/video/Illia Shokotko - Introduction.mp4" width="90%"
-            controls>Some things about me</video></div>
-    <a href="#header">Back to top</a>
 
-    </body>
+</body>
 
 </html>
